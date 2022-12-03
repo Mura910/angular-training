@@ -1,0 +1,17 @@
+<div class="btnArea">
+    <button class="btn" [class.activeBtn]="isListView" (click)="onListClick()">
+      List
+    </button>
+    <button class="btn" [class.activeBtn]="!isListView" (click)="onGridClick()">
+      Grid
+    </button>
+  </div>
+  
+  <div *ngIf="isListView; else gridView">
+    <app-list-item [menuList]="menuList"></app-list-item>
+  </div>
+  
+  <ng-template #gridView>
+    <app-grid-item [menuList]="menuList"></app-grid-item>
+  </ng-template>
+  

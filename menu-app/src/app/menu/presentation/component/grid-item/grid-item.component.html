@@ -1,0 +1,12 @@
+<div class="grid">
+    <div *ngFor="let data of menuList">
+      <div class="menuGridSet">
+        <div class="menuImg"><img [src]="data.url" alt="data.name" /></div>
+        <div class="explanation">
+          <div class="title">{{ data.name }}</div>
+          <div class="detail">{{ data.description }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,10 @@
+<div class="list" *ngFor="let data of menuList">
+    <div class="menuSet">
+      <img [src]="data.url" [alt]="data.name" />
+      <div class="explanation">
+        <div class="title">{{ data.name }}</div>
+        <div class="detail">{{ data.description }}</div>
+      </div>
+    </div>
+  </div>
+  
