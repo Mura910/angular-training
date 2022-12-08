@@ -21,6 +21,7 @@ const dummyData: MenuData[] = [
     name: 'マルゲリータ',
     description:
       'トマト・モッツァレラチーズ・バジルを自家製生地にのせ、石窯で焼き上げたシンプルなピザ。',
+    category: 0
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const dummyData: MenuData[] = [
     name: 'ココアケーキ',
     description:
       'ふんわりと焼き上げたココアケーキに、ブルーベリーとレッドカラントをトッピング。',
+    category: 1
   },
   {
     id: 3,
@@ -35,6 +37,7 @@ const dummyData: MenuData[] = [
     name: 'チーズステーキサンド',
     description:
       '甘辛くソテーした牛薄切り肉とチーズを使用した、フィラデルフィアのサンドイッチ。お好みでソースをつけてお召し上がりください。',
+      category: 0
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ const dummyData: MenuData[] = [
     name: 'レモンパイ',
     description:
       '甘酸っぱいレモンカードの上にメレンゲをのせ、さっくりと焼き上げたパイ。',
+    category: 1
   },
   {
     id: 5,
@@ -49,6 +53,7 @@ const dummyData: MenuData[] = [
     name: 'カフェラテ',
     description:
       '本日のおすすめのコーヒー豆を深煎りし、じっくり淹れたカフェラテ。ミルクはソイミルクに変更可(+￥50)。コーヒー豆の産地は店員にお尋ねください。',
+    category: 2
   },
   {
     id: 6,
@@ -56,6 +61,7 @@ const dummyData: MenuData[] = [
     name: '季節の温野菜サラダ',
     description:
       'オーブンでグリルした旬の野菜とグリーンリーフのサラダ。ドレッシングは、シーザー、セサミ、ソテードオニオンからお選びいただけます。',
+    category: 0
   },
   {
     id: 7,
@@ -63,6 +69,7 @@ const dummyData: MenuData[] = [
     name: 'かぼちゃのスープ',
     description:
       'バターナッツかぼちゃを使用したなめらかなポタージュスープ。テイクアウトもできます。',
+    category: 0
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ const dummyData: MenuData[] = [
     name: 'クリスマスティー',
     description:
       'スパイスとオレンジをブレンドした冬季限定のフレーバードティー。ストレートでもミルクティーでもお楽しみいただけます。※12/25までの限定メニュー',
+    category: 2
   },
   {
     id: 9,
@@ -77,6 +85,7 @@ const dummyData: MenuData[] = [
     name: 'BLTサンド',
     description:
       'アンガス牛100%の直火焼きパティに、北海道産のチェダーチーズをあわせたこだわりのBLTサンド。野菜の産地は店内掲示をご覧ください。',
+    category: 0
   },
 ];
 

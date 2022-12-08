@@ -1,17 +1,23 @@
 <div class="btnArea">
-    <button class="btn" [class.activeBtn]="isListView" (click)="onListClick()">
-      List
+    <button class="btn" [class.activeBtn]="display==0" (click)="onListClick()">
+        List
     </button>
-    <button class="btn" [class.activeBtn]="!isListView" (click)="onGridClick()">
-      Grid
+    <button class="btn" [class.activeBtn]="display==1" (click)="onGridClick()">
+        Grid
     </button>
-  </div>
-  
-  <div *ngIf="isListView; else gridView">
-    <app-list-item [menuList]="menuList"></app-list-item>
-  </div>
-  
-  <ng-template #gridView>
-    <app-grid-item [menuList]="menuList"></app-grid-item>
-  </ng-template>
-  
+    <button class="btn" [class.activeBtn]="display==2" (click)="onGroupClick()">
+        Group
+    </button>
+</div>
+
+<div [ngSwitch]="display">
+    <span *ngSwitchCase="0">
+        <app-list-item [menuList]="menuList"></app-list-item>
+    </span>
+    <span *ngSwitchCase="1">
+        <app-grid-item [menuList]="menuList"></app-grid-item>
+    </span>
+    <span *ngSwitchCase="2">
+        <app-group [menuList]="menuList"></app-group>
+    </span>
+</div>

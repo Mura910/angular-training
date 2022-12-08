@@ -2,6 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { MenuData } from 'src/app/shared/domain/menu-data';
 import { MenuDataLoaderService } from '../../domain/menu-data-loader.service';
 
+const Display = {
+  list: 0,
+  grid: 1,
+  group: 2,
+} as const;
+
+type Display = typeof Display[keyof typeof Display];
+
 @Component({
   selector: 'app-menu-page',
   templateUrl: './menu-page.component.html',
@@ -11,24 +19,27 @@ export class MenuPageComponent implements OnInit {
   //　メニュー一覧
   menuList: MenuData[];
 
-  //　リスト表示か
-  isListView: boolean;
+  //　表示形式
+  display: Display;
 
   constructor(private menuService: MenuDataLoaderService) {
-    this.menuList=[];
-    this.isListView = true;
+    this.menuList = [];
+    this.display = Display.list
   }
 
   ngOnInit() {
     this.menuList = this.menuService.loadMenu();
-    // this.isListView = true;
   }
 
   onListClick() {
-    this.isListView = true;
+    this.display = Display.list;
   }
 
   onGridClick() {
-    this.isListView = false;
+    this.display = Display.grid;
+  }
+
+  onGroupClick() {
+    this.display = Display.group;
   }
 }

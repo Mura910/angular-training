@@ -5,11 +5,12 @@ import { MenuDataLoaderServiceImpl } from './infrastructure/menu-data-loader.ser
 import { MenuPageComponent } from './presentation/menu-page/menu-page.component';
 import { ListItemComponent } from './presentation/component/list-item/list-item.component';
 import { GridItemComponent } from './presentation/component/grid-item/grid-item.component';
+import { GroupComponent } from './presentation/component/group/group.component';
 
 
 
 @NgModule({
-  declarations: [MenuPageComponent, ListItemComponent, GridItemComponent],
+  declarations: [MenuPageComponent, ListItemComponent, GridItemComponent, GroupComponent],
   imports: [CommonModule],
   exports: [MenuPageComponent],
   providers: [
